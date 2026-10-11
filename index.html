@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Character Counter</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-tr from-cyan-600 via-teal-600 to-emerald-500 flex items-center justify-center h-screen m-0">
+
+    <div class="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg border border-white/20">
+        <div class="text-center mb-6">
+            <h2 class="text-3xl font-extrabold text-slate-800">Message Box</h2>
+            <p class="text-sm text-slate-500 mt-1">Type your message below (Max 200 characters)</p>
+        </div>
+        
+        <!-- Text Area Box -->
+        <div class="space-y-3">
+            <textarea id="messageInput" rows="5" maxlength="200" placeholder="Type something here..."
+                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm transition-all resize-none"></textarea>
+            
+            <!-- Counter & Warning Display -->
+            <div class="flex justify-between items-center text-sm">
+                <span id="warningMsg" class="text-red-500 font-medium text-xs"></span>
+                <span id="counterDisplay" class="text-slate-600 font-semibold">0 / 200 characters</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File Link -->
+    <script src="script.js"></script>
+</body>
+</html>
